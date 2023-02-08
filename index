@@ -2,9 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon</title>
+    <title>Follow the Brick</title>
     <link rel="icon" href="favicon.ico" />
   </head>
+
+  <body>
+    <header>
+      <h1>Follow the Brick</h1>
+      <nav>
+        <menu>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="play.html">Play</a></li>
+          <li><a href="scores.html">Scores</a></li>
+          <li><a href="about.html">About</a></li>
+        </menu>
+      </nav>
+      <hr />
+    </header>
+
+
+      <main>
+        <h1>Welcome</h1>
+        <p>Login to play</a>.</p>
+        <form action="login.php" method="post">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <input type="submit" value="Login" />
+        </form>
+        
+        <h2>Home</h2>
+        <p>Welcome to Follow the Brick, a game where you have to follow the brick with your mouse. The brick will move faster and faster as you play. The goal is to get the highest score possible. You can play the game <a href="play.html">here</a>.</p>
+
+          <footer>
+            <p>Follow the Brick is a game made by Stephen Brockbank</p>
+            <br />
+            <a href="https://github.com/swbrock/simon/tree/main">GitHub</a>
+          </footer>
+        </main>
+    </body>
 </html
