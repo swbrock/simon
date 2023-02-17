@@ -123,3 +123,35 @@ footer a {
     height: 100%;
 }
 
+.score {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    color: red;
+    cursor: default;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: solid thin rgb(117, 0, 0);
+    background-color: #300;
+}
+
+.score:hover {
+    background-color: #600;
+}
+
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    main {
+        flex: 1 100vh;
+    }
+}
