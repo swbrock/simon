@@ -6,6 +6,17 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+}
+
+main {
+    flex: 1 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 a {
@@ -39,6 +50,7 @@ footer {
     padding: 10px 0;
     text-align: center;
     position: fixed;
+    flex: 0 30px;
 }
 
 nav {
@@ -49,10 +61,11 @@ nav {
     text-align: center;
 }
 
-nav menu {
+menu {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 nav menu li {
@@ -66,6 +79,7 @@ header {
     font-size: 12px;
     padding: 10px 0;
     text-align: center;
+    flex: 0 80px;
 }
 
 .navbar-brand {
@@ -73,6 +87,8 @@ header {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    padding-left: 0.3em;
+    border-bottom: solid 2px #fff;
 }
 
 footer a {
@@ -81,16 +97,23 @@ footer a {
     float: right;
 }
 
+#count {
+    color: rgb(246, 239, 239);
+}
+
 .players {
     background-color: #000;
     color: #fff;
     font-size: 12px;
     padding: 10px 0;
     text-align: center;
+    flex: 1;
+    width: 100%;
+    padding: 0.5em;
 }
 
 .player-name {
-    color: #fff;
+    color: lightblue;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
@@ -118,11 +141,62 @@ footer a {
 }
 
 .button-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
 }
+
+.button-top-left {
+    border-radius: 100% 0 0 0;
+    margin: 20px 0 0 20px;
+    background-color: green;
+    border: thick solid rgb(36, 53, 0);
+  }
+  
+  .button-top-right {
+    border-radius: 0 100% 0 0;
+    margin: 20px 20px 0 0;
+    background-color: red;
+    border: thick solid rgb(83, 12, 12);
+  }
+  
+  .button-bottom-left {
+    border-radius: 0 0 0 100%;
+    margin: 0 0 20px 20px;
+    background-color: yellow;
+    border: thick solid rgb(130, 124, 13);
+  }
+  
+  .button-bottom-right {
+    border-radius: 0 0 100% 0;
+    margin: 0 20px 20px 0;
+    background-color: blue;
+    border: thick solid rgb(27, 14, 100);
+  }
+
+  .controls {
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  
+  .game-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
 
 .score {
     position: absolute;
@@ -142,6 +216,12 @@ footer a {
 .score:hover {
     background-color: #600;
 }
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 
 @media (max-width: 768px) {
     header {
