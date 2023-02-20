@@ -48,9 +48,8 @@ footer {
     color: #fff;
     font-size: 12px;
     padding: 10px 0;
-    text-align: center;
-    position: fixed;
     flex: 0 30px;
+    text-align: justify;
 }
 
 nav {
